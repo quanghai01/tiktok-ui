@@ -1,10 +1,20 @@
 import "./App.css";
-import Button from "./components/button/Button";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { publicRoutes } from "./routes";
+import { DefaultLayout } from "./components/Layout";
 function App() {
   return (
-    <div className="App">
-      <Button></Button>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          {publicRoutes.map((route, index) => {
+            const Page = route.component;
+            return <Route key={index} path={route.path} element={<Page />} />;
+          })}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
