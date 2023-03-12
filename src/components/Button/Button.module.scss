@@ -1,0 +1,28 @@
+.wrapper {
+  font-size: 1.4vw;
+  font-weight: 600;
+  padding: 0vw 1.2vw;
+  height: 3vw;
+  color: var(--primary) !important;
+  border: 0.1vw solid;
+  border-radius: 0.3vw;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  + .wrapper {
+    margin-left: 1vw;
+  }
+}
+.primary {
+  color: #fff !important;
+  background-color: var(--primary);
+
+  &:hover {
+    background-color: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.06),
+      rgba(0, 0, 0, 0.06),
+      #fe2c55
+    );
+  }
+}
